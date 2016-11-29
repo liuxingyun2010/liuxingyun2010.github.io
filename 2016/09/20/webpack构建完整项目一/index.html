@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>webpack构建完整项目（一） | 个人博客</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">webpack构建完整项目（一）</h1><a id="logo" href="/.">个人博客</a><p class="description">一个追求极致用户体验的前端开发</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 主页</i></a><a href="/categories"><i class="fa fa-th"> 分类</i></a><a href="/tags"><i class="fa fa-tags"> 标签</i></a><a href="/about"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">webpack构建完整项目（一）</h1><div class="post-meta">Sep 20, 2016<span> | </span><span class="category"><a href="/categories/webpack/">webpack</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>根据自己项目的需求，搭建一个完整webpack项目，包含的功能有：</p>
+<ul>
+<li>js打包</li>
+<li>js压缩</li>
+<li>css编译（sass，自动前缀）</li>
+<li>css压缩</li>
+<li>js和css分离</li>
+<li>提取多个入口文件的公共脚本部分，生成公共js，方便多页面之间的复用</li>
+<li>独立打包样式文件</li>
+<li>图片压缩</li>
+<li>字体</li>
+<li>使用VUE</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>1.安装webpack<br>npm init</p>
+<p>npm install –save-dev webpack</p>
+<p>2.新建目录</p>
+<p>3.配置webpack.config.js</p>
+<p>4.安装开发服务器实时监测<br>npm install webpack-dev-server –save-dev</p>
+<p>5.配置package.json，可以使用快捷命令<br>npm start<br>npm run dev<br>npm run build</p>
+<p>6.运行</p>
+<h3 id="使用loader"><a href="#使用loader" class="headerlink" title="使用loader"></a>使用loader</h3><h4 id="sass使用"><a href="#sass使用" class="headerlink" title="sass使用"></a>sass使用</h4><p>安装babel</p>
+<p>安装vue</p>
+<p>安装vue-loader</p>
+<p>安装sass  </p>
+<p>安装autoprefixer</p>
+<p>安装babel</p>
+<p>安装extract-text-webpack-plugin 分离css</p>
+<p>组件单独配置config文件</p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://liuxingyun2010.github.io/2016/09/20/webpack构建完整项目一/" data-id="ciw3sflyb000faileoi47v1x4" class="article-share-link">分享到</a><div class="tags"><a href="/tags/webpack/">webpack</a><a href="/tags/模块化/">模块化</a></div><div class="post-nav"><a href="/2016/09/12/webpack入门学习一/" class="next">webpack入门学习一</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://liuxingyun2010.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/webpack/">webpack</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/移动开发/">移动开发</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/webpack/" style="font-size: 15px;">webpack</a> <a href="/tags/模块化/" style="font-size: 15px;">模块化</a> <a href="/tags/移动端/" style="font-size: 15px;">移动端</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/webpack构建完整项目一/">webpack构建完整项目（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/webpack入门学习一/">webpack入门学习一</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/08/前端几个基本概念/">前端几个基本概念</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">个人博客.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
